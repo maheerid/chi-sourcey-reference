@@ -1,0 +1,15 @@
+{
+  "corrections": [
+    {
+      "generator": "Sourcey 3.6.12",
+      "symbol": "HeaderRouter.Route",
+      "source": {
+        "file": "middleware/route_headers.go",
+        "line": 48
+      },
+      "before": "func  Router) Route(header, match string, middlewareHandler func(next http.Handler) http.Handler) HeaderRouter",
+      "after": "func Route(header, match string, middlewareHandler func(next http.Handler) http.Handler) HeaderRouter",
+      "reason": "Remove the native adapter's leftover receiver fragment; parameters and return type are read from pinned Go source."
+    }
+  ]
+}

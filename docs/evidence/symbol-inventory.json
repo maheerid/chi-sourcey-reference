@@ -1303,7 +1303,7 @@
       "package": "github.com/go-chi/chi/v5/middleware",
       "name": "HeaderRouter.Route",
       "kind": "method",
-      "declaration": "func  Router) Route(header, match string, middlewareHandler func(next http.Handler) http.Handler) HeaderRouter",
+      "declaration": "func Route(header, match string, middlewareHandler func(next http.Handler) http.Handler) HeaderRouter",
       "source": {
         "file": "middleware/route_headers.go",
         "line": 48

@@ -11,6 +11,7 @@ function run(command, args, cwd = project) {
 }
 run(path.join(project, "node_modules/.bin/runx"), ["--version"]);
 run("go", ["version"]);
+run("node", ["scripts/repair-snapshot.mjs"]);
 run(path.join(project, "node_modules/.bin/sourcey"), ["build"]);
 run("node", ["scripts/prepare-test-tls.mjs"]);
 run("go", ["test", "./..."], path.join(project, "vendor/chi"));

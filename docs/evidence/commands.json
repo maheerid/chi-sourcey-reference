@@ -14,6 +14,13 @@
     "stderr": ""
   },
   {
+    "command": "node scripts/repair-snapshot.mjs",
+    "directory": ".",
+    "status": 0,
+    "stdout": "Verified the HeaderRouter.Route snapshot signature against pinned Go source.\n",
+    "stderr": ""
+  },
+  {
     "command": "/workspace/scratch/0bdb05bcaf87/chi-sourcey-reference/node_modules/.bin/sourcey build",
     "directory": ".",
     "status": 0,
@@ -31,7 +38,7 @@
     "command": "go test ./...",
     "directory": "vendor/chi",
     "status": 0,
-    "stdout": "ok  \tgithub.com/go-chi/chi/v5\t(cached)\nok  \tgithub.com/go-chi/chi/v5/middleware\t26.171s\n",
+    "stdout": "ok  \tgithub.com/go-chi/chi/v5\t(cached)\nok  \tgithub.com/go-chi/chi/v5/middleware\t26.154s\n",
     "stderr": ""
   },
   {
@@ -52,7 +59,7 @@
     "command": "node scripts/validate-site.mjs",
     "directory": ".",
     "status": 0,
-    "stdout": "{\"ok\":true,\"pages\":10,\"sitemap_pages\":9,\"packages\":2,\"declarations\":128,\"source_files\":35,\"source_links\":127,\"local_links\":429,\"search_entries\":239,\"errors\":[]}\n",
+    "stdout": "{\"ok\":true,\"pages\":10,\"sitemap_pages\":9,\"packages\":2,\"declarations\":128,\"source_files\":35,\"source_links\":127,\"local_links\":430,\"search_entries\":239,\"errors\":[]}\n",
     "stderr": ""
   },
   {

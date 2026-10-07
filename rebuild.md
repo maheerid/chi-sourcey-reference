@@ -38,6 +38,8 @@ npm run validate
 
 The generated timestamp changes when regenerating the snapshot. Review source changes and API inventory changes before updating the pinned commit. Do not silently substitute a moving branch for the declared input.
 
+Snapshot extraction and builds run `scripts/repair-snapshot.mjs`. It checks the pinned `HeaderRouter.Route` declaration and corrects one Sourcey 3.6.12 receiver-fragment bug, with a public before/after record. Other extracted declarations are retained.
+
 The upstream HTTP/2 test expects a TLS pair in `vendor/chi/testdata/`. Private keys are excluded from this repository. `npm run prepare:fixtures` needs OpenSSL and generates a fresh local pair for that test only. Its certificate is self-signed, and the upstream test explicitly disables certificate verification. Do not use this test identity in production.
 
 ## Execute under runx

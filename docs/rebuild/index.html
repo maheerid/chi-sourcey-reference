@@ -48,6 +48,7 @@
 <span class="line"><span style="--shiki-light:#953800;--shiki-dark:#DCDCAA">npm</span><span style="--shiki-light:#0A3069;--shiki-dark:#CE9178"> run</span><span style="--shiki-light:#0A3069;--shiki-dark:#CE9178"> build</span></span>
 <span class="line"><span style="--shiki-light:#953800;--shiki-dark:#DCDCAA">npm</span><span style="--shiki-light:#0A3069;--shiki-dark:#CE9178"> run</span><span style="--shiki-light:#0A3069;--shiki-dark:#CE9178"> validate</span></span></code></pre></div>
 </div><p>The generated timestamp changes when regenerating the snapshot. Review source changes and API inventory changes before updating the pinned commit. Do not silently substitute a moving branch for the declared input.</p>
+<p>Snapshot extraction and builds run <code>scripts/repair-snapshot.mjs</code>. It checks the pinned <code>HeaderRouter.Route</code> declaration and corrects one Sourcey 3.6.12 receiver-fragment bug, with a public before/after record. Other extracted declarations are retained.</p>
 <p>The upstream HTTP/2 test expects a TLS pair in <code>vendor/chi/testdata/</code>. Private keys are excluded from this repository. <code>npm run prepare:fixtures</code> needs OpenSSL and generates a fresh local pair for that test only. Its certificate is self-signed, and the upstream test explicitly disables certificate verification. Do not use this test identity in production.</p>
 <h2 id="execute-under-runx">Execute under runx</h2>
 <div class="prose-code-block not-prose">

@@ -1525,7 +1525,7 @@
             {
               "name": "Route",
               "doc": "",
-              "signature": "func  Router) Route(header, match string, middlewareHandler func(next http.Handler) http.Handler) HeaderRouter",
+              "signature": "func Route(header, match string, middlewareHandler func(next http.Handler) http.Handler) HeaderRouter",
               "position": {
                 "file": "middleware/route_headers.go",
                 "line": 48

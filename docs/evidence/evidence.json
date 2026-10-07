@@ -66,13 +66,18 @@
     {
       "topic": "tls_test_fixture",
       "value": "TLS keys and certificates are excluded from the public repository. The governed build uses OpenSSL to generate a disposable local pair for the upstream HTTP/2 middleware test. All 35 documented Go source files remain byte-identical to the pinned upstream."
+    },
+    {
+      "topic": "snapshot_correction",
+      "value": "Sourcey 3.6.12 leaves a receiver fragment in HeaderRouter.Route. A checked-in repair validates its pinned source declaration before correcting the snapshot; malformed method signatures are rejected by validation.",
+      "record": "snapshot-corrections.json"
     }
   ],
-  "receipt_ref": "runx:receipt:sha256:64df451f8647be4a98ed807111fe27c4b5df439b477b2deb5df4d633b96c6151",
+  "receipt_ref": "runx:receipt:sha256:a1be75718dcf18c6fdbc6d6fe2edf7afd6dfb1c26a9ad3d9d1c84ffd03ffb61f",
   "validation": {
     "declarations": 128,
     "errors": [],
-    "local_links": 429,
+    "local_links": 430,
     "ok": true,
     "packages": 2,
     "pages": 10,

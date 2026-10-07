@@ -56,6 +56,7 @@ for (const p of snapshot.packages) {
     const id = owner ? `method-${owner}-${s.name}` : `${kind}-${s.name}`;
     check(ids.get(file)?.has(id), `missing generated anchor ${p.importPath}#${id}`);
     const declaration = s.signature || s.declaration;
+    if (owner) check(new RegExp(`^func\\s+${s.name}\\(`).test(s.signature), `malformed receiver-free method signature ${owner}.${s.name}`);
     if (declaration && kind !== "type") check(readable.includes(normalize(declaration)), `missing declaration ${p.importPath}.${owner ? owner + "." : ""}${s.name}`);
     const pos = s.position;
     if (pos?.file) {

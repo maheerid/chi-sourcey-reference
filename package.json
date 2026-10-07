@@ -5,9 +5,9 @@
   "type": "module",
   "description": "Sourcey-generated community reference for the pinned go-chi/chi source.",
   "scripts": {
-    "snapshot": "sourcey godoc --module vendor/chi --packages ./... --out godoc.json",
+    "snapshot": "sourcey godoc --module vendor/chi --packages ./... --out godoc.json && node scripts/repair-snapshot.mjs",
     "prepare:fixtures": "node scripts/prepare-test-tls.mjs",
-    "build": "sourcey build && node scripts/publish-output.mjs",
+    "build": "node scripts/repair-snapshot.mjs && sourcey build && node scripts/publish-output.mjs",
     "validate": "node scripts/validate-site.mjs",
     "deploy": "npm run build && npm run validate && node scripts/publish-output.mjs --deploy"
   },
