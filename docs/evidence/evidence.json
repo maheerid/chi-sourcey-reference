@@ -1,0 +1,84 @@
+{
+  "summary": "Native Sourcey documentation for the pinned MIT-licensed go-chi/chi v5 source, covering both public packages with six tested routing and middleware guides. This community project is prepared as a public portfolio; a personal GitHub Pages host does not satisfy Frantic bounty 33's registered-domain requirement, so no payment is claimed.",
+  "observations": [
+    {
+      "topic": "repository",
+      "value": "https://github.com/go-chi/chi"
+    },
+    {
+      "topic": "commit",
+      "value": "167e1e3bd039d060696b99c8da4e876ae04f42c1",
+      "commit_date": "2026-09-29"
+    },
+    {
+      "topic": "license",
+      "value": "MIT",
+      "file": "vendor/chi/LICENSE"
+    },
+    {
+      "topic": "adapter",
+      "value": "Sourcey 3.6.12 native godoc adapter; snapshot mode"
+    },
+    {
+      "topic": "command",
+      "value": "sourcey godoc --module vendor/chi --packages ./... --out godoc.json; sourcey build",
+      "config": "sourcey.config.ts"
+    },
+    {
+      "topic": "runx_version",
+      "value": "runx-cli 0.9.1",
+      "command": "runx --version"
+    },
+    {
+      "topic": "coverage",
+      "value": "128 exported declaration records in the root and middleware packages; unexported symbols and underscore example directories excluded; no extracted upstream Go Example blocks"
+    },
+    {
+      "topic": "pages",
+      "value": [
+        "introduction",
+        "quickstart",
+        "routing",
+        "middleware",
+        "coverage",
+        "rebuild",
+        "api",
+        "api/package-root",
+        "api/pkg-middleware"
+      ]
+    },
+    {
+      "topic": "examples",
+      "value": "Three executed Go test groups: parameters and 404/405, composition and late Use, cooperative deadline and 504"
+    },
+    {
+      "topic": "host_limit",
+      "value": "A personal GitHub Pages address is outside bounty 33's accepted hosting scope. No delivery or payout is asserted for this project."
+    },
+    {
+      "topic": "governed_execution",
+      "value": "Real runx local CLI-tool build and validation completed with a sealed development receipt. Digest, content address, and local development signature verify with the explicit development flag. No trusted production key or receipt-tree lineage is claimed.",
+      "receipt": "receipt.json",
+      "verification": "receipt-verification-development.json",
+      "commands": "commands.json",
+      "production_verification": "receipt-verification.json"
+    },
+    {
+      "topic": "tls_test_fixture",
+      "value": "TLS keys and certificates are excluded from the public repository. The governed build uses OpenSSL to generate a disposable local pair for the upstream HTTP/2 middleware test. All 35 documented Go source files remain byte-identical to the pinned upstream."
+    }
+  ],
+  "receipt_ref": "runx:receipt:sha256:64df451f8647be4a98ed807111fe27c4b5df439b477b2deb5df4d633b96c6151",
+  "validation": {
+    "declarations": 128,
+    "errors": [],
+    "local_links": 429,
+    "ok": true,
+    "packages": 2,
+    "pages": 10,
+    "search_entries": 239,
+    "sitemap_pages": 9,
+    "source_files": 35,
+    "source_links": 127
+  }
+}

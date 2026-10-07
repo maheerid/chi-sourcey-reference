@@ -1,0 +1,1413 @@
+{
+  "count": 128,
+  "symbols": [
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "RouteCtxKey",
+      "kind": "var",
+      "declaration": "var (\n\t// RouteCtxKey is the context.Context key to store the request context.\n\tRouteCtxKey = &contextKey{\"RouteContext\"}\n)",
+      "source": {
+        "file": "context.go",
+        "line": 37
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#var-RouteCtxKey"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Chain",
+      "kind": "func",
+      "declaration": "func Chain(middlewares ...func(http.Handler) http.Handler) Middlewares",
+      "source": {
+        "file": "chain.go",
+        "line": 6
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#func-Chain"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "NewMux",
+      "kind": "func",
+      "declaration": "func NewMux() *Mux",
+      "source": {
+        "file": "mux.go",
+        "line": 52
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#func-NewMux"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "NewRouteContext",
+      "kind": "func",
+      "declaration": "func NewRouteContext() *Context",
+      "source": {
+        "file": "context.go",
+        "line": 31
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#func-NewRouteContext"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "NewRouter",
+      "kind": "func",
+      "declaration": "func NewRouter() *Mux",
+      "source": {
+        "file": "chi.go",
+        "line": 62
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#func-NewRouter"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "RegisterMethod",
+      "kind": "func",
+      "declaration": "func RegisterMethod(method string)",
+      "source": {
+        "file": "tree.go",
+        "line": 70
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#func-RegisterMethod"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "RouteContext",
+      "kind": "func",
+      "declaration": "func RouteContext(ctx context.Context) *Context",
+      "source": {
+        "file": "context.go",
+        "line": 25
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#func-RouteContext"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "URLParam",
+      "kind": "func",
+      "declaration": "func URLParam(r *http.Request, key string) string",
+      "source": {
+        "file": "context.go",
+        "line": 11
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#func-URLParam"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "URLParamFromCtx",
+      "kind": "func",
+      "declaration": "func URLParamFromCtx(ctx context.Context, key string) string",
+      "source": {
+        "file": "context.go",
+        "line": 16
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#func-URLParamFromCtx"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Walk",
+      "kind": "func",
+      "declaration": "func Walk(r Routes, walkFn WalkFunc) error",
+      "source": {
+        "file": "tree.go",
+        "line": 882
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#func-Walk"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "ChainHandler",
+      "kind": "type",
+      "declaration": "type ChainHandler struct {\n\tEndpoint http.Handler\n\n\tMiddlewares Middlewares\n\t// contains filtered or unexported fields\n}",
+      "source": {
+        "file": "chain.go",
+        "line": 24
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#type-ChainHandler"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "ChainHandler.ServeHTTP",
+      "kind": "method",
+      "declaration": "func  ServeHTTP(w http.ResponseWriter, r *http.Request)",
+      "source": {
+        "file": "chain.go",
+        "line": 30
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-ChainHandler-ServeHTTP"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Context",
+      "kind": "type",
+      "declaration": "type Context struct {\n\tRoutes Routes\n\n\t// Routing path/method override used during the route search.\n\t// See Mux#routeHTTP method.\n\tRoutePath   string\n\tRouteMethod string\n\n\t// URLParams are the stack of routeParams captured during the\n\t// routing lifecycle across a stack of sub-routers.\n\tURLParams RouteParams\n\n\t// Routing pattern stack throughout the lifecycle of the request,\n\t// across all connected routers. It is a record of all matching\n\t// patterns across a stack of sub-routers.\n\tRoutePatterns []string\n\t// contains filtered or unexported fields\n}",
+      "source": {
+        "file": "context.go",
+        "line": 45
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#type-Context"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Context.Clone",
+      "kind": "method",
+      "declaration": "func  Clone() *Context",
+      "source": {
+        "file": "context.go",
+        "line": 104
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Context-Clone"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Context.Reset",
+      "kind": "method",
+      "declaration": "func  Reset()",
+      "source": {
+        "file": "context.go",
+        "line": 82
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Context-Reset"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Context.RoutePattern",
+      "kind": "method",
+      "declaration": "func  RoutePattern() string",
+      "source": {
+        "file": "context.go",
+        "line": 147
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Context-RoutePattern"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Context.URLParam",
+      "kind": "method",
+      "declaration": "func  URLParam(key string) string",
+      "source": {
+        "file": "context.go",
+        "line": 124
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Context-URLParam"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Middlewares",
+      "kind": "type",
+      "declaration": "type Middlewares []func(http.Handler) http.Handler",
+      "source": {
+        "file": "chi.go",
+        "line": 140
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#type-Middlewares"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Middlewares.Handler",
+      "kind": "method",
+      "declaration": "func  Handler(h http.Handler) http.Handler",
+      "source": {
+        "file": "chain.go",
+        "line": 12
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Middlewares-Handler"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Middlewares.HandlerFunc",
+      "kind": "method",
+      "declaration": "func  HandlerFunc(h http.HandlerFunc) http.Handler",
+      "source": {
+        "file": "chain.go",
+        "line": 18
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Middlewares-HandlerFunc"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux",
+      "kind": "type",
+      "declaration": "type Mux struct {\n\t// contains filtered or unexported fields\n}",
+      "source": {
+        "file": "mux.go",
+        "line": 21
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#type-Mux"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Connect",
+      "kind": "method",
+      "declaration": "func  Connect(pattern string, handlerFn http.HandlerFunc)",
+      "source": {
+        "file": "mux.go",
+        "line": 143
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Connect"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Delete",
+      "kind": "method",
+      "declaration": "func  Delete(pattern string, handlerFn http.HandlerFunc)",
+      "source": {
+        "file": "mux.go",
+        "line": 149
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Delete"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Find",
+      "kind": "method",
+      "declaration": "func  Find(rctx *Context, method, path string) string",
+      "source": {
+        "file": "mux.go",
+        "line": 382
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Find"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Get",
+      "kind": "method",
+      "declaration": "func  Get(pattern string, handlerFn http.HandlerFunc)",
+      "source": {
+        "file": "mux.go",
+        "line": 155
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Get"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Group",
+      "kind": "method",
+      "declaration": "func  Group(fn func(r Router)) Router",
+      "source": {
+        "file": "mux.go",
+        "line": 268
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Group"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Handle",
+      "kind": "method",
+      "declaration": "func  Handle(pattern string, handler http.Handler)",
+      "source": {
+        "file": "mux.go",
+        "line": 109
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Handle"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.HandleFunc",
+      "kind": "method",
+      "declaration": "func  HandleFunc(pattern string, handlerFn http.HandlerFunc)",
+      "source": {
+        "file": "mux.go",
+        "line": 121
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-HandleFunc"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Head",
+      "kind": "method",
+      "declaration": "func  Head(pattern string, handlerFn http.HandlerFunc)",
+      "source": {
+        "file": "mux.go",
+        "line": 161
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Head"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Match",
+      "kind": "method",
+      "declaration": "func  Match(rctx *Context, method, path string) bool",
+      "source": {
+        "file": "mux.go",
+        "line": 373
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Match"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Method",
+      "kind": "method",
+      "declaration": "func  Method(method, pattern string, handler http.Handler)",
+      "source": {
+        "file": "mux.go",
+        "line": 127
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Method"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.MethodFunc",
+      "kind": "method",
+      "declaration": "func  MethodFunc(method, pattern string, handlerFn http.HandlerFunc)",
+      "source": {
+        "file": "mux.go",
+        "line": 137
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-MethodFunc"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.MethodNotAllowed",
+      "kind": "method",
+      "declaration": "func  MethodNotAllowed(handlerFn http.HandlerFunc)",
+      "source": {
+        "file": "mux.go",
+        "line": 223
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-MethodNotAllowed"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.MethodNotAllowedHandler",
+      "kind": "method",
+      "declaration": "func  MethodNotAllowedHandler(methodsAllowed ...methodTyp) http.HandlerFunc",
+      "source": {
+        "file": "mux.go",
+        "line": 421
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-MethodNotAllowedHandler"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Middlewares",
+      "kind": "method",
+      "declaration": "func  Middlewares() Middlewares",
+      "source": {
+        "file": "mux.go",
+        "line": 363
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Middlewares"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Mount",
+      "kind": "method",
+      "declaration": "func  Mount(pattern string, handler http.Handler)",
+      "source": {
+        "file": "mux.go",
+        "line": 295
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Mount"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.NotFound",
+      "kind": "method",
+      "declaration": "func  NotFound(handlerFn http.HandlerFunc)",
+      "source": {
+        "file": "mux.go",
+        "line": 203
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-NotFound"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.NotFoundHandler",
+      "kind": "method",
+      "declaration": "func  NotFoundHandler() http.HandlerFunc",
+      "source": {
+        "file": "mux.go",
+        "line": 412
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-NotFoundHandler"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Options",
+      "kind": "method",
+      "declaration": "func  Options(pattern string, handlerFn http.HandlerFunc)",
+      "source": {
+        "file": "mux.go",
+        "line": 167
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Options"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Patch",
+      "kind": "method",
+      "declaration": "func  Patch(pattern string, handlerFn http.HandlerFunc)",
+      "source": {
+        "file": "mux.go",
+        "line": 173
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Patch"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Post",
+      "kind": "method",
+      "declaration": "func  Post(pattern string, handlerFn http.HandlerFunc)",
+      "source": {
+        "file": "mux.go",
+        "line": 179
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Post"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Put",
+      "kind": "method",
+      "declaration": "func  Put(pattern string, handlerFn http.HandlerFunc)",
+      "source": {
+        "file": "mux.go",
+        "line": 185
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Put"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Query",
+      "kind": "method",
+      "declaration": "func  Query(pattern string, handlerFn http.HandlerFunc)",
+      "source": {
+        "file": "mux.go",
+        "line": 191
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Query"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Route",
+      "kind": "method",
+      "declaration": "func  Route(pattern string, fn func(r Router)) Router",
+      "source": {
+        "file": "mux.go",
+        "line": 278
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Route"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Routes",
+      "kind": "method",
+      "declaration": "func  Routes() []Route",
+      "source": {
+        "file": "mux.go",
+        "line": 358
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Routes"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.ServeHTTP",
+      "kind": "method",
+      "declaration": "func  ServeHTTP(w http.ResponseWriter, r *http.Request)",
+      "source": {
+        "file": "mux.go",
+        "line": 63
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-ServeHTTP"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Trace",
+      "kind": "method",
+      "declaration": "func  Trace(pattern string, handlerFn http.HandlerFunc)",
+      "source": {
+        "file": "mux.go",
+        "line": 197
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Trace"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.Use",
+      "kind": "method",
+      "declaration": "func  Use(middlewares ...func(http.Handler) http.Handler)",
+      "source": {
+        "file": "mux.go",
+        "line": 100
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-Use"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Mux.With",
+      "kind": "method",
+      "declaration": "func  With(middlewares ...func(http.Handler) http.Handler) Router",
+      "source": {
+        "file": "mux.go",
+        "line": 242
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-Mux-With"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Route",
+      "kind": "type",
+      "declaration": "type Route struct {\n\tSubRoutes Routes\n\tHandlers  map[string]http.Handler\n\tPattern   string\n}",
+      "source": {
+        "file": "tree.go",
+        "line": 872
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#type-Route"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "RouteParams",
+      "kind": "type",
+      "declaration": "type RouteParams struct {\n\tKeys, Values []string\n}",
+      "source": {
+        "file": "context.go",
+        "line": 171
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#type-RouteParams"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "RouteParams.Add",
+      "kind": "method",
+      "declaration": "func  Add(key, value string)",
+      "source": {
+        "file": "context.go",
+        "line": 176
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#method-RouteParams-Add"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Router",
+      "kind": "type",
+      "declaration": "type Router interface {\n\thttp.Handler\n\tRoutes\n\n\t// Use appends one or more middlewares onto the Router stack.\n\tUse(middlewares ...func(http.Handler) http.Handler)\n\n\t// With adds inline middlewares for an endpoint handler.\n\tWith(middlewares ...func(http.Handler) http.Handler) Router\n\n\t// Group adds a new inline-Router along the current routing\n\t// path, with a fresh middleware stack for the inline-Router.\n\tGroup(fn func(r Router)) Router\n\n\t// Route mounts a sub-Router along a `pattern` string.\n\tRoute(pattern string, fn func(r Router)) Router\n\n\t// Mount attaches another http.Handler along ./pattern/*\n\tMount(pattern string, h http.Handler)\n\n\t// Handle and HandleFunc adds routes for `pattern` that matches\n\t// all HTTP methods.\n\tHandle(pattern string, h http.Handler)\n\tHandleFunc(pattern string, h http.HandlerFunc)\n\n\t// Method and MethodFunc adds routes for `pattern` that matches\n\t// the `method` HTTP method.\n\tMethod(method, pattern string, h http.Handler)\n\tMethodFunc(method, pattern string, h http.HandlerFunc)\n\n\t// HTTP-method routing along `pattern`\n\tConnect(pattern string, h http.HandlerFunc)\n\tDelete(pattern string, h http.HandlerFunc)\n\tGet(pattern string, h http.HandlerFunc)\n\tHead(pattern string, h http.HandlerFunc)\n\tOptions(pattern string, h http.HandlerFunc)\n\tPatch(pattern string, h http.HandlerFunc)\n\tPost(pattern string, h http.HandlerFunc)\n\tPut(pattern string, h http.HandlerFunc)\n\tQuery(pattern string, h http.HandlerFunc)\n\tTrace(pattern string, h http.HandlerFunc)\n\n\t// NotFound defines a handler to respond whenever a route could\n\t// not be found.\n\tNotFound(h http.HandlerFunc)\n\n\t// MethodNotAllowed defines a handler to respond whenever a method is\n\t// not allowed.\n\tMethodNotAllowed(h http.HandlerFunc)\n}",
+      "source": {
+        "file": "chi.go",
+        "line": 68
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#type-Router"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "Routes",
+      "kind": "type",
+      "declaration": "type Routes interface {\n\t// Routes returns the routing tree in an easily traversable structure.\n\tRoutes() []Route\n\n\t// Middlewares returns the list of middlewares in use by the router.\n\tMiddlewares() Middlewares\n\n\t// Match searches the routing tree for a handler that matches\n\t// the method/path - similar to routing a http request, but without\n\t// executing the handler thereafter.\n\tMatch(rctx *Context, method, path string) bool\n\n\t// Find searches the routing tree for the pattern that matches\n\t// the method/path.\n\tFind(rctx *Context, method, path string) string\n}",
+      "source": {
+        "file": "chi.go",
+        "line": 121
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#type-Routes"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5",
+      "name": "WalkFunc",
+      "kind": "type",
+      "declaration": "type WalkFunc func(method string, route string, handler http.Handler, middlewares ...func(http.Handler) http.Handler) error",
+      "source": {
+        "file": "tree.go",
+        "line": 879
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/package-root/#type-WalkFunc"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "RequestIDKey",
+      "kind": "const",
+      "declaration": "const RequestIDKey ctxKeyRequestID = 0",
+      "source": {
+        "file": "middleware/request_id.go",
+        "line": 21
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#const-RequestIDKey"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "LogEntryCtxKey",
+      "kind": "var",
+      "declaration": "var (\n\t// LogEntryCtxKey is the context.Context key to store the request log entry.\n\tLogEntryCtxKey = &contextKey{\"LogEntry\"}\n\n\t// DefaultLogger is called by the Logger middleware handler to log each request.\n\t// Its made a package-level variable so that it can be reconfigured for custom\n\t// logging configurations.\n\tDefaultLogger func(next http.Handler) http.Handler\n)",
+      "source": {
+        "file": "middleware/logger.go",
+        "line": 15
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#var-LogEntryCtxKey"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "DefaultLogger",
+      "kind": "var",
+      "declaration": "var (\n\t// LogEntryCtxKey is the context.Context key to store the request log entry.\n\tLogEntryCtxKey = &contextKey{\"LogEntry\"}\n\n\t// DefaultLogger is called by the Logger middleware handler to log each request.\n\t// Its made a package-level variable so that it can be reconfigured for custom\n\t// logging configurations.\n\tDefaultLogger func(next http.Handler) http.Handler\n)",
+      "source": {
+        "file": "middleware/logger.go",
+        "line": 20
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#var-DefaultLogger"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "IsTTY",
+      "kind": "var",
+      "declaration": "var IsTTY bool",
+      "source": {
+        "file": "middleware/terminal.go",
+        "line": 35
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#var-IsTTY"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "RequestIDHeader",
+      "kind": "var",
+      "declaration": "var RequestIDHeader = \"X-Request-Id\"",
+      "source": {
+        "file": "middleware/request_id.go",
+        "line": 25
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#var-RequestIDHeader"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "URLFormatCtxKey",
+      "kind": "var",
+      "declaration": "var (\n\t// URLFormatCtxKey is the context.Context key to store the URL format data\n\t// for a request.\n\tURLFormatCtxKey = &contextKey{\"URLFormat\"}\n)",
+      "source": {
+        "file": "middleware/url_format.go",
+        "line": 14
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#var-URLFormatCtxKey"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "AllowContentEncoding",
+      "kind": "func",
+      "declaration": "func AllowContentEncoding(contentEncoding ...string) func(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/content_encoding.go",
+        "line": 10
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-AllowContentEncoding"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "AllowContentType",
+      "kind": "func",
+      "declaration": "func AllowContentType(contentTypes ...string) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/content_type.go",
+        "line": 20
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-AllowContentType"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "BasicAuth",
+      "kind": "func",
+      "declaration": "func BasicAuth(realm string, creds map[string]string) func(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/basic_auth.go",
+        "line": 10
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-BasicAuth"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "CleanPath",
+      "kind": "func",
+      "declaration": "func CleanPath(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/clean_path.go",
+        "line": 12
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-CleanPath"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "ClientIPFromHeader",
+      "kind": "func",
+      "declaration": "func ClientIPFromHeader(trustedHeader string) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/client_ip.go",
+        "line": 42
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-ClientIPFromHeader"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "ClientIPFromRemoteAddr",
+      "kind": "func",
+      "declaration": "func ClientIPFromRemoteAddr(h http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/client_ip.go",
+        "line": 188
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-ClientIPFromRemoteAddr"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "ClientIPFromXFF",
+      "kind": "func",
+      "declaration": "func ClientIPFromXFF(trustedIPPrefixes ...string) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/client_ip.go",
+        "line": 93
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-ClientIPFromXFF"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "ClientIPFromXFFTrustedProxies",
+      "kind": "func",
+      "declaration": "func ClientIPFromXFFTrustedProxies(numTrustedProxies int) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/client_ip.go",
+        "line": 150
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-ClientIPFromXFFTrustedProxies"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "Compress",
+      "kind": "func",
+      "declaration": "func Compress(level int, types ...string) func(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/compress.go",
+        "line": 45
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-Compress"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "ContentCharset",
+      "kind": "func",
+      "declaration": "func ContentCharset(charsets ...string) func(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/content_charset.go",
+        "line": 12
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-ContentCharset"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "GetClientIP",
+      "kind": "func",
+      "declaration": "func GetClientIP(ctx context.Context) string",
+      "source": {
+        "file": "middleware/client_ip.go",
+        "line": 204
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-GetClientIP"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "GetClientIPAddr",
+      "kind": "func",
+      "declaration": "func GetClientIPAddr(ctx context.Context) netip.Addr",
+      "source": {
+        "file": "middleware/client_ip.go",
+        "line": 216
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-GetClientIPAddr"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "GetHead",
+      "kind": "func",
+      "declaration": "func GetHead(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/get_head.go",
+        "line": 10
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-GetHead"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "GetLogEntry",
+      "kind": "func",
+      "declaration": "func GetLogEntry(r *http.Request) LogEntry",
+      "source": {
+        "file": "middleware/logger.go",
+        "line": 75
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-GetLogEntry"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "GetReqID",
+      "kind": "func",
+      "declaration": "func GetReqID(ctx context.Context) string",
+      "source": {
+        "file": "middleware/request_id.go",
+        "line": 83
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-GetReqID"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "Heartbeat",
+      "kind": "func",
+      "declaration": "func Heartbeat(endpoint string) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/heartbeat.go",
+        "line": 12
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-Heartbeat"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "Logger",
+      "kind": "func",
+      "declaration": "func Logger(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/logger.go",
+        "line": 39
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-Logger"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "Maybe",
+      "kind": "func",
+      "declaration": "func Maybe(mw func(http.Handler) http.Handler, maybeFn func(r *http.Request) bool) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/maybe.go",
+        "line": 8
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-Maybe"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "New",
+      "kind": "func",
+      "declaration": "func New(h http.Handler) func(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/middleware.go",
+        "line": 6
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-New"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "NewCompressor",
+      "kind": "func",
+      "declaration": "func NewCompressor(level int, types ...string) *Compressor",
+      "source": {
+        "file": "middleware/compress.go",
+        "line": 72
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-NewCompressor"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "NewPattern",
+      "kind": "func",
+      "declaration": "func NewPattern(value string) Pattern",
+      "source": {
+        "file": "middleware/route_headers.go",
+        "line": 135
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-NewPattern"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "NewWrapResponseWriter",
+      "kind": "func",
+      "declaration": "func NewWrapResponseWriter(w http.ResponseWriter, protoMajor int) WrapResponseWriter",
+      "source": {
+        "file": "middleware/wrap_writer.go",
+        "line": 15
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-NewWrapResponseWriter"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "NextRequestID",
+      "kind": "func",
+      "declaration": "func NextRequestID() uint64",
+      "source": {
+        "file": "middleware/request_id.go",
+        "line": 94
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-NextRequestID"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "NoCache",
+      "kind": "func",
+      "declaration": "func NoCache(h http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/nocache.go",
+        "line": 40
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-NoCache"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "PageRoute",
+      "kind": "func",
+      "declaration": "func PageRoute(path string, handler http.Handler) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/page_route.go",
+        "line": 10
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-PageRoute"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "PathRewrite",
+      "kind": "func",
+      "declaration": "func PathRewrite(old, new string) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/path_rewrite.go",
+        "line": 9
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-PathRewrite"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "PrintPrettyStack",
+      "kind": "func",
+      "declaration": "func PrintPrettyStack(rvr any)",
+      "source": {
+        "file": "middleware/recoverer.go",
+        "line": 54
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-PrintPrettyStack"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "Profiler",
+      "kind": "func",
+      "declaration": "func Profiler() http.Handler",
+      "source": {
+        "file": "middleware/profiler.go",
+        "line": 22
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-Profiler"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "RealIP",
+      "kind": "func",
+      "declaration": "func RealIP(h http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/realip.go",
+        "line": 28
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-RealIP"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "Recoverer",
+      "kind": "func",
+      "declaration": "func Recoverer(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/recoverer.go",
+        "line": 22
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-Recoverer"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "RedirectSlashes",
+      "kind": "func",
+      "declaration": "func RedirectSlashes(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/strip.go",
+        "line": 41
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-RedirectSlashes"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "RequestID",
+      "kind": "func",
+      "declaration": "func RequestID(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/request_id.go",
+        "line": 67
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-RequestID"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "RequestLogger",
+      "kind": "func",
+      "declaration": "func RequestLogger(f LogFormatter) func(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/logger.go",
+        "line": 44
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-RequestLogger"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "RequestSize",
+      "kind": "func",
+      "declaration": "func RequestSize(bytes int64) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/request_size.go",
+        "line": 9
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-RequestSize"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "RouteHeaders",
+      "kind": "func",
+      "declaration": "func RouteHeaders() HeaderRouter",
+      "source": {
+        "file": "middleware/route_headers.go",
+        "line": 42
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-RouteHeaders"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "SetHeader",
+      "kind": "func",
+      "declaration": "func SetHeader(key, value string) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/content_type.go",
+        "line": 9
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-SetHeader"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "StripPrefix",
+      "kind": "func",
+      "declaration": "func StripPrefix(prefix string) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/strip.go",
+        "line": 73
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-StripPrefix"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "StripSlashes",
+      "kind": "func",
+      "declaration": "func StripSlashes(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/strip.go",
+        "line": 14
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-StripSlashes"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "Sunset",
+      "kind": "func",
+      "declaration": "func Sunset(sunsetAt time.Time, links ...string) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/sunset.go",
+        "line": 11
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-Sunset"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "SupressNotFound",
+      "kind": "func",
+      "declaration": "func SupressNotFound(router *chi.Mux) func(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/supress_notfound.go",
+        "line": 15
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-SupressNotFound"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "Throttle",
+      "kind": "func",
+      "declaration": "func Throttle(limit int) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/throttle.go",
+        "line": 32
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-Throttle"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "ThrottleBacklog",
+      "kind": "func",
+      "declaration": "func ThrottleBacklog(limit, backlogLimit int, backlogTimeout time.Duration) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/throttle.go",
+        "line": 39
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-ThrottleBacklog"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "ThrottleWithOpts",
+      "kind": "func",
+      "declaration": "func ThrottleWithOpts(opts ThrottleOpts) func(http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/throttle.go",
+        "line": 44
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-ThrottleWithOpts"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "Timeout",
+      "kind": "func",
+      "declaration": "func Timeout(timeout time.Duration) func(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/timeout.go",
+        "line": 32
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-Timeout"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "URLFormat",
+      "kind": "func",
+      "declaration": "func URLFormat(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/url_format.go",
+        "line": 46
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-URLFormat"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "WithLogEntry",
+      "kind": "func",
+      "declaration": "func WithLogEntry(r *http.Request, entry LogEntry) *http.Request",
+      "source": {
+        "file": "middleware/logger.go",
+        "line": 81
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-WithLogEntry"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "WithValue",
+      "kind": "func",
+      "declaration": "func WithValue(key, val any) func(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/value.go",
+        "line": 9
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#func-WithValue"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "Compressor",
+      "kind": "type",
+      "declaration": "type Compressor struct {\n\t// contains filtered or unexported fields\n}",
+      "source": {
+        "file": "middleware/compress.go",
+        "line": 51
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#type-Compressor"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "Compressor.Handler",
+      "kind": "method",
+      "declaration": "func  Handler(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/compress.go",
+        "line": 207
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#method-Compressor-Handler"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "Compressor.SetEncoder",
+      "kind": "method",
+      "declaration": "func  SetEncoder(encoding string, fn EncoderFunc)",
+      "source": {
+        "file": "middleware/compress.go",
+        "line": 167
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#method-Compressor-SetEncoder"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "DefaultLogFormatter",
+      "kind": "type",
+      "declaration": "type DefaultLogFormatter struct {\n\tLogger  LoggerInterface\n\tNoColor bool\n}",
+      "source": {
+        "file": "middleware/logger.go",
+        "line": 92
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#type-DefaultLogFormatter"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "DefaultLogFormatter.NewLogEntry",
+      "kind": "method",
+      "declaration": "func  NewLogEntry(r *http.Request) LogEntry",
+      "source": {
+        "file": "middleware/logger.go",
+        "line": 98
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#method-DefaultLogFormatter-NewLogEntry"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "EncoderFunc",
+      "kind": "type",
+      "declaration": "type EncoderFunc func(w io.Writer, level int) io.Writer",
+      "source": {
+        "file": "middleware/compress.go",
+        "line": 273
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#type-EncoderFunc"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "HeaderRoute",
+      "kind": "type",
+      "declaration": "type HeaderRoute struct {\n\tMiddleware func(next http.Handler) http.Handler\n\tMatchOne   Pattern\n\tMatchAny   []Pattern\n}",
+      "source": {
+        "file": "middleware/route_headers.go",
+        "line": 110
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#type-HeaderRoute"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "HeaderRoute.IsMatch",
+      "kind": "method",
+      "declaration": "func  IsMatch(value string) bool",
+      "source": {
+        "file": "middleware/route_headers.go",
+        "line": 116
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#method-HeaderRoute-IsMatch"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "HeaderRouter",
+      "kind": "type",
+      "declaration": "type HeaderRouter map[string][]HeaderRoute",
+      "source": {
+        "file": "middleware/route_headers.go",
+        "line": 46
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#type-HeaderRouter"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "HeaderRouter.Handler",
+      "kind": "method",
+      "declaration": "func  Handler(next http.Handler) http.Handler",
+      "source": {
+        "file": "middleware/route_headers.go",
+        "line": 77
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#method-HeaderRouter-Handler"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "HeaderRouter.Route",
+      "kind": "method",
+      "declaration": "func  Router) Route(header, match string, middlewareHandler func(next http.Handler) http.Handler) HeaderRouter",
+      "source": {
+        "file": "middleware/route_headers.go",
+        "line": 48
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#method-HeaderRouter-Route"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "HeaderRouter.RouteAny",
+      "kind": "method",
+      "declaration": "func  RouteAny(header string, match []string, middlewareHandler func(next http.Handler) http.Handler) HeaderRouter",
+      "source": {
+        "file": "middleware/route_headers.go",
+        "line": 58
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#method-HeaderRouter-RouteAny"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "HeaderRouter.RouteDefault",
+      "kind": "method",
+      "declaration": "func  RouteDefault(handler func(next http.Handler) http.Handler) HeaderRouter",
+      "source": {
+        "file": "middleware/route_headers.go",
+        "line": 72
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#method-HeaderRouter-RouteDefault"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "LogEntry",
+      "kind": "type",
+      "declaration": "type LogEntry interface {\n\tWrite(status, bytes int, header http.Header, elapsed time.Duration, extra any)\n\tPanic(v any, stack []byte)\n}",
+      "source": {
+        "file": "middleware/logger.go",
+        "line": 69
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#type-LogEntry"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "LogFormatter",
+      "kind": "type",
+      "declaration": "type LogFormatter interface {\n\tNewLogEntry(r *http.Request) LogEntry\n}",
+      "source": {
+        "file": "middleware/logger.go",
+        "line": 63
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#type-LogFormatter"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "LoggerInterface",
+      "kind": "type",
+      "declaration": "type LoggerInterface interface {\n\tPrint(v ...any)\n}",
+      "source": {
+        "file": "middleware/logger.go",
+        "line": 87
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#type-LoggerInterface"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "Pattern",
+      "kind": "type",
+      "declaration": "type Pattern struct {\n\t// contains filtered or unexported fields\n}",
+      "source": {
+        "file": "middleware/route_headers.go",
+        "line": 129
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#type-Pattern"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "Pattern.Match",
+      "kind": "method",
+      "declaration": "func  Match(v string) bool",
+      "source": {
+        "file": "middleware/route_headers.go",
+        "line": 141
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#method-Pattern-Match"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "ThrottleOpts",
+      "kind": "type",
+      "declaration": "type ThrottleOpts struct {\n\tRetryAfterFn   func(ctxDone bool) time.Duration\n\tLimit          int\n\tBacklogLimit   int\n\tBacklogTimeout time.Duration\n\tStatusCode     int\n}",
+      "source": {
+        "file": "middleware/throttle.go",
+        "line": 20
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#type-ThrottleOpts"
+    },
+    {
+      "package": "github.com/go-chi/chi/v5/middleware",
+      "name": "WrapResponseWriter",
+      "kind": "type",
+      "declaration": "type WrapResponseWriter interface {\n\thttp.ResponseWriter\n\t// Status returns the HTTP status of the request, or 0 if one has not\n\t// yet been sent.\n\tStatus() int\n\t// BytesWritten returns the total number of bytes sent to the client.\n\tBytesWritten() int\n\t// Tee causes the response body to be written to the given io.Writer in\n\t// addition to proxying the writes through. Only one io.Writer can be\n\t// tee'd to at once: setting a second one will overwrite the first.\n\t// Writes will be sent to the proxy before being written to this\n\t// io.Writer. It is illegal for the tee'd writer to be modified\n\t// concurrently with writes.\n\tTee(io.Writer)\n\t// Unwrap returns the original proxied target.\n\tUnwrap() http.ResponseWriter\n\t// Discard causes all writes to the original ResponseWriter be discarded,\n\t// instead writing only to the tee'd writer if it's set.\n\t// Flush calls also do not reach the original ResponseWriter.\n\t// The caller is responsible for calling WriteHeader and Write on the\n\t// original ResponseWriter once the processing is done.\n\tDiscard()\n}",
+      "source": {
+        "file": "middleware/wrap_writer.go",
+        "line": 48
+      },
+      "url": "https://maheerid.github.io/chi-sourcey-reference/api/pkg-middleware/#type-WrapResponseWriter"
+    }
+  ]
+}

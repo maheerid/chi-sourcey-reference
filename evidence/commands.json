@@ -1,0 +1,65 @@
+[
+  {
+    "command": "/workspace/scratch/0bdb05bcaf87/chi-sourcey-reference/node_modules/.bin/runx --version",
+    "directory": ".",
+    "status": 0,
+    "stdout": "runx-cli 0.9.1\n",
+    "stderr": ""
+  },
+  {
+    "command": "go version",
+    "directory": ".",
+    "status": 0,
+    "stdout": "go version go1.27.1 linux/amd64\n",
+    "stderr": ""
+  },
+  {
+    "command": "/workspace/scratch/0bdb05bcaf87/chi-sourcey-reference/node_modules/.bin/sourcey build",
+    "directory": ".",
+    "status": 0,
+    "stdout": "\nSourcey: building documentation site\n\n  Pages:  9\n  Output: /workspace/scratch/0bdb05bcaf87/chi-sourcey-reference/dist\n  Time:   0.6s\n\n",
+    "stderr": ""
+  },
+  {
+    "command": "node scripts/prepare-test-tls.mjs",
+    "directory": ".",
+    "status": 0,
+    "stdout": "Generated a disposable local TLS fixture for the upstream HTTP/2 test.\n",
+    "stderr": ""
+  },
+  {
+    "command": "go test ./...",
+    "directory": "vendor/chi",
+    "status": 0,
+    "stdout": "ok  \tgithub.com/go-chi/chi/v5\t(cached)\nok  \tgithub.com/go-chi/chi/v5/middleware\t26.171s\n",
+    "stderr": ""
+  },
+  {
+    "command": "go test -v ./...",
+    "directory": "examples",
+    "status": 0,
+    "stdout": "=== RUN   TestParameterAndFailures\n=== RUN   TestParameterAndFailures/GET/users/42\n=== RUN   TestParameterAndFailures/GET/missing\n=== RUN   TestParameterAndFailures/POST/users/42\n--- PASS: TestParameterAndFailures (0.00s)\n    --- PASS: TestParameterAndFailures/GET/users/42 (0.00s)\n    --- PASS: TestParameterAndFailures/GET/missing (0.00s)\n    --- PASS: TestParameterAndFailures/POST/users/42 (0.00s)\n=== RUN   TestCompositionScopes\n=== RUN   TestCompositionScopes//public\n=== RUN   TestCompositionScopes//inline\n=== RUN   TestCompositionScopes//private\n=== RUN   TestCompositionScopes//api/version\n=== RUN   TestCompositionScopes//child/ping\n=== RUN   TestCompositionScopes/late_Use_panics\n--- PASS: TestCompositionScopes (0.00s)\n    --- PASS: TestCompositionScopes//public (0.00s)\n    --- PASS: TestCompositionScopes//inline (0.00s)\n    --- PASS: TestCompositionScopes//private (0.00s)\n    --- PASS: TestCompositionScopes//api/version (0.00s)\n    --- PASS: TestCompositionScopes//child/ping (0.00s)\n    --- PASS: TestCompositionScopes/late_Use_panics (0.00s)\n=== RUN   TestCooperativeDeadline\n--- PASS: TestCooperativeDeadline (0.00s)\nPASS\nok  \tchi-sourcey-reference/examples\t(cached)\n",
+    "stderr": ""
+  },
+  {
+    "command": "node scripts/publish-output.mjs",
+    "directory": ".",
+    "status": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": "node scripts/validate-site.mjs",
+    "directory": ".",
+    "status": 0,
+    "stdout": "{\"ok\":true,\"pages\":10,\"sitemap_pages\":9,\"packages\":2,\"declarations\":128,\"source_files\":35,\"source_links\":127,\"local_links\":429,\"search_entries\":239,\"errors\":[]}\n",
+    "stderr": ""
+  },
+  {
+    "command": "node scripts/publish-output.mjs",
+    "directory": ".",
+    "status": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

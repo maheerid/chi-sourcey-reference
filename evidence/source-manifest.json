@@ -1,0 +1,181 @@
+{
+  "repository": "https://github.com/go-chi/chi",
+  "commit": "167e1e3bd039d060696b99c8da4e876ae04f42c1",
+  "files": [
+    {
+      "file": "chain.go",
+      "sha256": "8c22d7bbc23f4b4d46ded5ef721a9c3a173031fa2c2c9a7b48c46c2b07e8bd80",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/chain.go"
+    },
+    {
+      "file": "chi.go",
+      "sha256": "47c70ececcbb9d71f973eda3cbadad0a46c8cc2261b285f7049b5261f337d678",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/chi.go"
+    },
+    {
+      "file": "context.go",
+      "sha256": "b19edcca252e2fe74e82802c4c7ce1a1c0855728f9ede1288f0224283dfc7e53",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/context.go"
+    },
+    {
+      "file": "middleware/basic_auth.go",
+      "sha256": "d1cfa0a32e9871cfba478590d1c1010297df20e53bbf83f34b09a4ec76e8b278",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/basic_auth.go"
+    },
+    {
+      "file": "middleware/clean_path.go",
+      "sha256": "00cf47dd47cf4b6a1fa29dd3d5cdff4f7de8adbea410801128afe8aeaed35f0d",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/clean_path.go"
+    },
+    {
+      "file": "middleware/client_ip.go",
+      "sha256": "fc4eef97991796067607038437bd3b23e04337ba9b07ed3c4147d8b49ecf5e9e",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/client_ip.go"
+    },
+    {
+      "file": "middleware/compress.go",
+      "sha256": "1a54e1cd05a913dd26bc00faab499cddc58a00646a92af5051961100d1532698",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/compress.go"
+    },
+    {
+      "file": "middleware/content_charset.go",
+      "sha256": "0e618e324ac9ef288b924323b42e6ae3d3d865f1acc6fa72c9c4ca827f124aeb",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/content_charset.go"
+    },
+    {
+      "file": "middleware/content_encoding.go",
+      "sha256": "a1b35d124400a423d385eca9d066593c790e867db165af75e25b31b649d37fd8",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/content_encoding.go"
+    },
+    {
+      "file": "middleware/content_type.go",
+      "sha256": "5cedd359e3390edc613557681dda3cbc60faa2e4efb2a8974464876377b3a797",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/content_type.go"
+    },
+    {
+      "file": "middleware/get_head.go",
+      "sha256": "76af2014d2080f597a0205f51265badcad7af64d09652a79ed1a214074f5c582",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/get_head.go"
+    },
+    {
+      "file": "middleware/heartbeat.go",
+      "sha256": "fc242f8c645cfc7640a36bccccb490cad9136ed07a751b0998f554412c29bca4",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/heartbeat.go"
+    },
+    {
+      "file": "middleware/logger.go",
+      "sha256": "40e7b7b01eb0363aad9930d3764880e3cf6f1f8aed6ad3fd918866ec34602729",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/logger.go"
+    },
+    {
+      "file": "middleware/maybe.go",
+      "sha256": "d600d7ea5b3184ea8ea952a145b1fca21e458b94601eae4a6cb215b3a04a3dee",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/maybe.go"
+    },
+    {
+      "file": "middleware/middleware.go",
+      "sha256": "8789f84814d815185cb5a7bc6c247969b67d0ff9b8045ee1c95f4c9ad59ff4b1",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/middleware.go"
+    },
+    {
+      "file": "middleware/nocache.go",
+      "sha256": "389eb1e308194561aea139b8d56d49f46b9fb30d84f8da146f5deaea66c5f5cc",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/nocache.go"
+    },
+    {
+      "file": "middleware/page_route.go",
+      "sha256": "03f3b50c4a55c345b52ce8f4b6d5da4b977647dd66e2e59b5f3635bda93e779c",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/page_route.go"
+    },
+    {
+      "file": "middleware/path_rewrite.go",
+      "sha256": "0f3c01a40e320494a093d804376f3be8519b86285b5e24e8937bcee2c13c9279",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/path_rewrite.go"
+    },
+    {
+      "file": "middleware/profiler.go",
+      "sha256": "5b21bca97731b2df9aff87767ea1325b77a401c823fa6cdcf52ad38616d48faa",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/profiler.go"
+    },
+    {
+      "file": "middleware/realip.go",
+      "sha256": "2f837f2213de7074c5c6915dad70f85c4588077291a8563d1cbad6698a757220",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/realip.go"
+    },
+    {
+      "file": "middleware/recoverer.go",
+      "sha256": "efc38c7b32bfb29ebbe16b199832d1eff13179a34a025c07b53c733c11a2154c",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/recoverer.go"
+    },
+    {
+      "file": "middleware/request_id.go",
+      "sha256": "31b21034dd5cd6393fa9abc9ce1207acc78fea1e162d866edf6bb2a7badd288b",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/request_id.go"
+    },
+    {
+      "file": "middleware/request_size.go",
+      "sha256": "81a98f72a81442a01a4353be9833fda6803f585bf768cebde5a34ebc1c44c390",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/request_size.go"
+    },
+    {
+      "file": "middleware/route_headers.go",
+      "sha256": "cfd320f1a996ac95e29e25ab8a2ffa9606577996d6e001fb3835ede2795a3f69",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/route_headers.go"
+    },
+    {
+      "file": "middleware/strip.go",
+      "sha256": "d5a0929e147b8b2a58ee78f0166a67f0949255b698bd5d26983a62643fc8fe10",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/strip.go"
+    },
+    {
+      "file": "middleware/sunset.go",
+      "sha256": "16d99c4da576c4b7c024a12da139421d5659290250bed8f3d3ff6e0ed5d93b0e",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/sunset.go"
+    },
+    {
+      "file": "middleware/supress_notfound.go",
+      "sha256": "b3c6cb935d27aaddef0dcb5d165447babf5e9bb42cf28b4ee4e5f4693810888f",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/supress_notfound.go"
+    },
+    {
+      "file": "middleware/terminal.go",
+      "sha256": "6e663b6ab8e26417198021c226b5aa5bce92648c5bb172d329389c16bef8ca20",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/terminal.go"
+    },
+    {
+      "file": "middleware/throttle.go",
+      "sha256": "05569797a14131ba177a71fccccd509363ca2016fa4c45a31cff033ae44301e4",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/throttle.go"
+    },
+    {
+      "file": "middleware/timeout.go",
+      "sha256": "3e83d007ec300b4ea605d97a336351e562ecd84b32c2b26206791d11ce7501c0",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/timeout.go"
+    },
+    {
+      "file": "middleware/url_format.go",
+      "sha256": "a1ea4ec9039b5a704f8aea7754a9b00d8026b72d18ba98208cd04b182e1b5800",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/url_format.go"
+    },
+    {
+      "file": "middleware/value.go",
+      "sha256": "288b19d77e375d2b2f65dbd901f958f3fb7c93c26de0691e70817dd343c9a679",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/value.go"
+    },
+    {
+      "file": "middleware/wrap_writer.go",
+      "sha256": "7b6ed24d3d5bfd362e00851d117e74273b02597a1d9e9eb243cbf7aae22597c8",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/middleware/wrap_writer.go"
+    },
+    {
+      "file": "mux.go",
+      "sha256": "cc44c2d620e6306b16d6d80f5f6c70f02b5814b357a4f5823372818f355ae67d",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/mux.go"
+    },
+    {
+      "file": "tree.go",
+      "sha256": "f4b12b63b662fb8e36658172b36b35705cfb24eefae0665635f4fbd52e64fb79",
+      "upstream": "https://github.com/go-chi/chi/blob/167e1e3bd039d060696b99c8da4e876ae04f42c1/tree.go"
+    }
+  ]
+}

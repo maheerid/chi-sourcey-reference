@@ -1,0 +1,44 @@
+skill: chi-source-reference-build
+version: "1.0.0"
+catalog:
+  kind: skill
+  audience: public
+  visibility: public
+  role: canonical
+harness:
+  cases:
+    - name: chi-source-reference-build-smoke
+      runner: default
+      operator_journeys:
+        - mode: standalone
+          confusors: [extract, web-fetch]
+          request: Build Sourcey documentation from this local pinned chi source reference, run the upstream and companion tests, and validate generated symbol coverage and links.
+          expected_outcome: Return the measured build and validation results from the advertised default CLI runner in a sealed receipt.
+        - mode: composed
+          request: Rebuild the chi reference using the already supplied project directory and committed source snapshot.
+          expected_outcome: Reuse the prepared local source and snapshot without searching for or replacing the upstream commit.
+          prior_evidence: [The complete pinned project directory and godoc.json are supplied.]
+          must_not_repeat: [Do not rediscover the library, replace the pinned commit, or fetch a moving source branch.]
+      inputs:
+        project: ..
+      expect:
+        status: sealed
+        receipt:
+          schema: runx.receipt.v1
+          state: sealed
+          disposition: closed
+          reason_code: process_closed
+runners:
+  default:
+    default: true
+    type: cli-tool
+    command: node
+    args: [run.mjs]
+    artifacts:
+      named_emits:
+        validation: validation
+    inputs:
+      project:
+        type: string
+        required: true
+        description: Local directory of the checked-in chi source reference project.

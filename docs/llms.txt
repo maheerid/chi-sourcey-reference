@@ -1,0 +1,18 @@
+# chi / Source Reference
+
+> A community reference for the pinned chi v5 source, generated with Sourcey and backed by executable examples.
+
+## Guides
+
+- [chi — HTTP routing from the source](/chi-sourcey-reference/introduction/): A community reference for the pinned chi v5 source, generated with Sourcey and backed by executable examples.
+- [Your first route](/chi-sourcey-reference/quickstart/): Read a URL parameter and test a chi handler with net/http/httptest.
+- [Compose routes deliberately](/chi-sourcey-reference/routing/): Choose With, Group, Route, or Mount and understand where middleware applies.
+- [Middleware recipes and deadlines](/chi-sourcey-reference/middleware/): Compose standard net/http middleware and handle chi Timeout correctly.
+- [Coverage and provenance](/chi-sourcey-reference/coverage/): Pinned source, adapter configuration, coverage boundaries, and public verification artifacts.
+- [Reproduce the reference](/chi-sourcey-reference/rebuild/): Rebuild static HTML, regenerate native Go documentation, and rerun the checks from public source.
+
+## Go API
+
+- [github.com/go-chi/chi/v5](/chi-sourcey-reference/api/package-root/): Package chi is a small, idiomatic and composable router for building HTTP services.
+- [middleware](/chi-sourcey-reference/api/pkg-middleware/): github.com/go-chi/chi/v5/middleware
+- [Go API](/chi-sourcey-reference/api/): github.com/go-chi/chi/v5
